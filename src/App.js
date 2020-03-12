@@ -4,13 +4,15 @@ import './App.css';
 
 //Components
 import MenuOperaciones from './components/MenuOperaciones';
+import Rutas from './components/Rutas';
 
 function App() {
   return (
     <Router>
-
+        <Link to="/" className="display-4 text-bold">Calculadora</Link> <br/>
         <MenuOperaciones />
 
+        <Rutas/>
       </Router>
   );
 }

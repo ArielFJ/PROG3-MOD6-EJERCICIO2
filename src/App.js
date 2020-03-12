@@ -9,7 +9,12 @@ import Rutas from './components/Rutas';
 function App() {
   return (
     <Router>
-        <Link to="/" className="display-4 text-bold">Calculadora</Link> <br/>
+        <Link 
+          to="/" 
+          className="display-3"
+          style={{ textDecoration:'none', color:'black', cursor:'pointer' }}>
+            <b>Calculadora</b>
+        </Link> <br/>
         <MenuOperaciones />
 
         <Rutas/>

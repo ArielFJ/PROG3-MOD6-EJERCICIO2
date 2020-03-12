@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import {Route} from 'react-router-dom'
 
 //Components
-import {Suma, Resta, Multiplicacion, Division} from './Basica';
+import {Suma, Resta, Multiplicacion, Division} from './Basica/Basica';
 import {Potencia, RaizCuadrada, RaizCubica, Factorial} from './Prealgebra';
 import {Logaritmo, Neperiano, Exponencial} from './Algebra';
 import {Seno, Coseno, Tangente, Cotangente, Secante, Cosecante} from './Trigonometria';

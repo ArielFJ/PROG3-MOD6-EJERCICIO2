@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 
-export class FormLogaritmo extends Component {
+export class FormInputDoble extends Component {
 
     state = {
         base : 0,
@@ -30,16 +30,16 @@ export class FormLogaritmo extends Component {
                         <div className="col-lg-5" style={{marginRight:'-7.5rem', marginLeft:'9rem'}}>
                             <div className="form-group">
                                 <div className="col-md-5">
-                                    <label className="control-label">Base</label>
+                                    <label className="control-label">{this.props.input1}</label>
                                     <input name="base" type="number" min="2" className="form-control" onChange={this.onChange.bind(this)} />
                                 </div>
                             </div>
                         </div>
 
-                        <div className="col-lg-5" style={{marginLeft:'5.5rem'}}>
+                        <div className="col-lg-5" style={{marginLeft:'10rem'}}>
                             <div className="form-group">
                                 <div className="col-md-5">
-                                    <label className="control-label">Argumento</label>
+                                    <label className="control-label">{this.props.input2}</label>
                                     <input name="argumento" type="number" min="1" className="form-control" onChange={this.onChange.bind(this)} />
                                 </div>
                             </div>
@@ -57,8 +57,10 @@ export class FormLogaritmo extends Component {
     }
 }
 
-FormLogaritmo.propTypes = {
+FormInputDoble.propTypes = {
+    input1: PropTypes.string,
+    input2: PropTypes.string,
     onSubmit: PropTypes.func
 }
 
-export default FormLogaritmo;
+export default FormInputDoble;

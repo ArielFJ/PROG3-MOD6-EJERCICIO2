@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import FormLogaritmo from './FormLogaritmo';
+import FormInputDoble from './FormInputDoble';
 import FormAlgebra from './FormAlgebra';
 
 export class Logaritmo extends Component {
@@ -20,7 +20,9 @@ export class Logaritmo extends Component {
         return (
             <div>
                 <h1 className="display-4" >Logaritmo</h1>
-                <FormLogaritmo
+                <FormInputDoble
+                    input1="Base"
+                    input2="Argumento"
                     onSubmit={this.onSubmit.bind(this)}
                     res={this.state.res} />
             </div> 

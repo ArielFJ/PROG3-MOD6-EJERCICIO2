@@ -4,7 +4,7 @@ import {Route} from 'react-router-dom'
 //Components
 import {Suma, Resta, Multiplicacion, Division} from './Basica/Basica';
 import {Potencia, RaizCuadrada, RaizCubica, Factorial} from './Prealgebra';
-import {Logaritmo, Neperiano, Exponencial} from './Algebra';
+import {Logaritmo, Neperiano, Exponencial} from './Algebra/Algebra';
 import {Seno, Coseno, Tangente, Cotangente, Secante, Cosecante} from './Trigonometria';
 
 export class Rutas extends Component {

@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 
-export class FormBasica extends Component {
+export class FormAlgebra extends Component {
 
     state = {
-        n1 : 0,
-        n2 : 0
+        argumento : 0
     }
 
     onChange(e) {        
@@ -19,7 +18,7 @@ export class FormBasica extends Component {
 
     onSubmit(e){
         e.preventDefault();
-        this.props.onSubmit(this.state.n1, this.state.n2);
+        this.props.onSubmit(this.state.base, this.state.argumento);
     }
 
     render() {
@@ -27,23 +26,15 @@ export class FormBasica extends Component {
             <div>
                 <form onSubmit={this.onSubmit.bind(this)}>
                     <div className="form-row align-items-center">
-                        <div className="col-lg-5" style={{marginRight:'-7.5rem', marginLeft:'9rem'}}>
+                        <div className="col-lg-5" style={{marginLeft:'38%'}}>
                             <div className="form-group">
                                 <div className="col-md-5">
-                                    <label className="control-label">Número 1</label>
-                                    <input name="n1" type="number" step="0.0001" className="form-control" onChange={this.onChange.bind(this)} />
+                                    <label className="control-label">{this.props.mensaje}</label>
+                                    <input name="base" type="number" min="2" className="form-control" onChange={this.onChange.bind(this)} />
                                 </div>
                             </div>
                         </div>
-                        <div className="col"><h1>{this.props.signo}</h1></div>
-                        <div className="col-lg-5" style={{marginLeft:'5.5rem'}}>
-                            <div className="form-group">
-                                <div className="col-md-5">
-                                    <label className="control-label">Número 2</label>
-                                    <input name="n2" type="number" step="0.0001" className="form-control" onChange={this.onChange.bind(this)} />
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                     <div className="form-group" style={{margin:'5% 41%'}}>
                         <div className="col-md-5">
@@ -57,9 +48,8 @@ export class FormBasica extends Component {
     }
 }
 
-FormBasica.propTypes = {
-    signo: PropTypes.string,
+FormAlgebra.propTypes = {
     onSubmit: PropTypes.func
 }
 
-export default FormBasica;
+export default FormAlgebra;

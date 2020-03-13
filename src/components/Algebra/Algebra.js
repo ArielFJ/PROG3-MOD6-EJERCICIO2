@@ -14,6 +14,7 @@ export class Logaritmo extends Component {
         this.setState({
             res: res
         });
+        return `Log de ${argumento} en base ${base} = ${res}`;
     }
 
     render() {
@@ -40,6 +41,7 @@ export class Neperiano extends Component {
         this.setState({
             res: res
         });
+        return `Log natural de ${argumento} = ${res}`;
     }
 
     render() {
@@ -65,6 +67,7 @@ export class Exponencial extends Component {
         this.setState({
             res
         });
+        return `E elevado a ${argumento} = ${res}`;
     }
 
     render() {

@@ -34,6 +34,7 @@ export class Seno extends Operacion {
             <div>
                 <h1 className="display-4" >Seno</h1>
                 <FormAlgebra
+                    guardarLS={this.props.guardarLS}
                     mensaje="Seno de"
                     onSubmit={this.onSubmit.bind(this)}
                     res={this.state.res} />
@@ -56,6 +57,7 @@ export class Coseno extends Operacion {
             <div>
                 <h1 className="display-4" >Coseno</h1>
                 <FormAlgebra
+                    guardarLS={this.props.guardarLS}
                     mensaje="Coseno de"
                     onSubmit={this.onSubmit.bind(this)}
                     res={this.state.res} />
@@ -78,6 +80,7 @@ export class Tangente extends Operacion {
             <div>
                 <h1 className="display-4" >Tangente</h1>
                 <FormAlgebra
+                    guardarLS={this.props.guardarLS}
                     mensaje="Tangente de"
                     onSubmit={this.onSubmit.bind(this)}
                     res={this.state.res} />
@@ -100,6 +103,7 @@ export class Cotangente extends Operacion {
             <div>
                 <h1 className="display-4" >Cotangente</h1>
                 <FormAlgebra
+                    guardarLS={this.props.guardarLS}
                     mensaje="Cotangente de"
                     onSubmit={this.onSubmit.bind(this)}
                     res={this.state.res} />
@@ -122,6 +126,7 @@ export class Secante extends Operacion {
             <div>
                 <h1 className="display-4" >Secante</h1>
                 <FormAlgebra
+                    guardarLS={this.props.guardarLS}
                     mensaje="Secante de"
                     onSubmit={this.onSubmit.bind(this)}
                     res={this.state.res} />
@@ -144,6 +149,7 @@ export class Cosecante extends Operacion {
             <div>
                 <h1 className="display-4" >Cosecante</h1>
                 <FormAlgebra
+                    guardarLS={this.props.guardarLS}
                     mensaje="Cosecante de"
                     onSubmit={this.onSubmit.bind(this)}
                     res={this.state.res} />

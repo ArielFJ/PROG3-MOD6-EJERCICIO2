@@ -21,6 +21,7 @@ export class FormAlgebra extends Component {
         const op = this.props.onSubmit(this.state.argumento);
         console.log(op);
         // set local storage
+        this.props.guardarLS(op);
     }
 
     render() {

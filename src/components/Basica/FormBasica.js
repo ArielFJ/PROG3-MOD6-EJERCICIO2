@@ -22,6 +22,8 @@ export class FormBasica extends Component {
         const op = this.props.onSubmit(this.state.n1, this.state.n2);
         console.log(op);
         // Subir operaciones al localSotrage
+        this.props.guardarLS(op);
+        
     }
 
     obtenerElementosLS(){

@@ -9,6 +9,12 @@ import {Seno, Coseno, Tangente, Cotangente, Secante, Cosecante} from './Trigonom
 
 export class Rutas extends Component {
 
+    constructor(){
+        super();
+        this.obtenerElementosLS = this.obtenerElementosLS.bind(this);
+        this.guardarLS = this.guardarLS.bind(this);
+    }
+
     obtenerElementosLS(){
         let arreglo;
         if(localStorage.length < 0){
@@ -19,7 +25,7 @@ export class Rutas extends Component {
         return arreglo;
     }
 
-    guardarEnLS(dato){
+    guardarLS(dato){
         let arreglo = this.obtenerElementosLS();
         if(arreglo === null)
             arreglo = [];
@@ -39,29 +45,29 @@ export class Rutas extends Component {
                     </div> 
                 }} />
                 {/* BASICAS */}
-                <Route exact path="/Basica/Suma" render={() =>{ return <Suma guardarLS={this.guardarEnLS}  />}} />
-                <Route exact path="/Basica/Resta" render={() =>{ return <Resta guardarLS={this.guardarEnLS}  />}} />
-                <Route exact path="/Basica/Multiplicacion" render={() =>{ return <Multiplicacion guardarLS={this.guardarEnLS}  />}} />
-                <Route exact path="/Basica/Division" render={() =>{ return <Division guardarLS={this.guardarEnLS}  />}} />
+                <Route exact path="/Basica/Suma" render={() =>{ return <Suma guardarLS={this.guardarLS}  />}} />
+                <Route exact path="/Basica/Resta" render={() =>{ return <Resta guardarLS={this.guardarLS}  />}} />
+                <Route exact path="/Basica/Multiplicacion" render={() =>{ return <Multiplicacion guardarLS={this.guardarLS}  />}} />
+                <Route exact path="/Basica/Division" render={() =>{ return <Division guardarLS={this.guardarLS}  />}} />
                 
                 {/* PREALGEBRA */}
-                <Route exact path="/Prealgebra/Potencia" render={() =>{ return <Potencia guardarLS={this.guardarEnLS}  />}} />
-                <Route exact path="/Prealgebra/RaizCuadrada" render={() =>{ return <RaizCuadrada guardarLS={this.guardarEnLS}  />}} />
-                <Route exact path="/Prealgebra/RaizCubica" render={() =>{ return <RaizCubica guardarLS={this.guardarEnLS}  />}} />
-                <Route exact path="/Prealgebra/Factorial" render={() =>{ return <Factorial guardarLS={this.guardarEnLS}  />}} />
+                <Route exact path="/Prealgebra/Potencia" render={() =>{ return <Potencia guardarLS={this.guardarLS}  />}} />
+                <Route exact path="/Prealgebra/RaizCuadrada" render={() =>{ return <RaizCuadrada guardarLS={this.guardarLS}  />}} />
+                <Route exact path="/Prealgebra/RaizCubica" render={() =>{ return <RaizCubica guardarLS={this.guardarLS}  />}} />
+                <Route exact path="/Prealgebra/Factorial" render={() =>{ return <Factorial guardarLS={this.guardarLS}  />}} />
 
                 {/* ALGEBRA */}
-                <Route exact path="/Algebra/Logaritmo" render={() =>{ return <Logaritmo guardarLS={this.guardarEnLS}  />}} />
-                <Route exact path="/Algebra/Neperiano" render={() =>{ return <Neperiano guardarLS={this.guardarEnLS}  />}} />
-                <Route exact path="/Algebra/Exponencial" render={() =>{ return <Exponencial guardarLS={this.guardarEnLS}  />}} />
+                <Route exact path="/Algebra/Logaritmo" render={() =>{ return <Logaritmo guardarLS={this.guardarLS}  />}} />
+                <Route exact path="/Algebra/Neperiano" render={() =>{ return <Neperiano guardarLS={this.guardarLS}  />}} />
+                <Route exact path="/Algebra/Exponencial" render={() =>{ return <Exponencial guardarLS={this.guardarLS}  />}} />
 
                 {/* TRIGONOMETRIA */}    
-                <Route exact path="/Trigonometria/Seno" render={() =>{ return <Seno guardarLS={this.guardarEnLS}  />}} />
-                <Route exact path="/Trigonometria/Coseno" render={() =>{ return <Coseno guardarLS={this.guardarEnLS}  />}} />
-                <Route exact path="/Trigonometria/Tangente" render={() =>{ return <Tangente guardarLS={this.guardarEnLS}  />}} />
-                <Route exact path="/Trigonometria/Cotangente" render={() =>{ return <Cotangente guardarLS={this.guardarEnLS}  />}} />
-                <Route exact path="/Trigonometria/Secante" render={() =>{ return <Secante guardarLS={this.guardarEnLS}  />}} />
-                <Route exact path="/Trigonometria/Cosecante" render={() =>{ return <Cosecante guardarLS={this.guardarEnLS}  />}} />
+                <Route exact path="/Trigonometria/Seno" render={() =>{ return <Seno guardarLS={this.guardarLS}  />}} />
+                <Route exact path="/Trigonometria/Coseno" render={() =>{ return <Coseno guardarLS={this.guardarLS}  />}} />
+                <Route exact path="/Trigonometria/Tangente" render={() =>{ return <Tangente guardarLS={this.guardarLS}  />}} />
+                <Route exact path="/Trigonometria/Cotangente" render={() =>{ return <Cotangente guardarLS={this.guardarLS}  />}} />
+                <Route exact path="/Trigonometria/Secante" render={() =>{ return <Secante guardarLS={this.guardarLS}  />}} />
+                <Route exact path="/Trigonometria/Cosecante" render={() =>{ return <Cosecante guardarLS={this.guardarLS}  />}} />
             </div>
         )
     }

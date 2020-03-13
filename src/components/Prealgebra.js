@@ -22,6 +22,7 @@ export class Potencia extends Operacion {
         this.setState({
             res
         });
+        return `${base}^${exponente} = ${res}`;
     }
 
     render() {
@@ -44,6 +45,7 @@ export class RaizCuadrada extends Operacion {
         this.setState({
             res
         });
+        return `Raíz cuadrada de ${radicando} = ${res}`;
     }
 
     render() {
@@ -65,6 +67,7 @@ export class RaizCubica extends Operacion {
         this.setState({
             res
         });
+        return `Raíz cúbica de ${radicando} = ${res}`;
     }
 
     render() {
@@ -86,6 +89,7 @@ export class Factorial extends Operacion {
         this.setState({
             res
         });
+        return `${factor}! = ${res}`;
     }
 
     factorial(factor){

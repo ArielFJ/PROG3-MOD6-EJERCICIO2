@@ -59,6 +59,11 @@ class MenuOperaciones extends Component{
                         <Link  className="dropdown-item" to="/Trigonometria/Cosecante">Cosecante</Link>                        
                     </div>
                 </div>
+                <div className="btn-group mr-4">
+                    <Link to="/Historial" className="btn btn-secondary ">
+                        Historial
+                    </Link>                    
+                </div>
             </div>
         );
     }

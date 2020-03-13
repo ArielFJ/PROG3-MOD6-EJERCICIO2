@@ -6,6 +6,7 @@ import {Suma, Resta, Multiplicacion, Division} from './Basica/Basica';
 import {Potencia, RaizCuadrada, RaizCubica, Factorial} from './Prealgebra';
 import {Logaritmo, Neperiano, Exponencial} from './Algebra/Algebra';
 import {Seno, Coseno, Tangente, Cotangente, Secante, Cosecante} from './Trigonometria';
+import Historial from './Historial';
 
 export class Rutas extends Component {
 
@@ -68,6 +69,9 @@ export class Rutas extends Component {
                 <Route exact path="/Trigonometria/Cotangente" render={() =>{ return <Cotangente guardarLS={this.guardarLS}  />}} />
                 <Route exact path="/Trigonometria/Secante" render={() =>{ return <Secante guardarLS={this.guardarLS}  />}} />
                 <Route exact path="/Trigonometria/Cosecante" render={() =>{ return <Cosecante guardarLS={this.guardarLS}  />}} />
+
+                {/* HISTORIAL */}
+                <Route exact path="/Historial" render={() => { return <Historial obtenerLS={this.obtenerElementosLS} /> }} />
             </div>
         )
     }

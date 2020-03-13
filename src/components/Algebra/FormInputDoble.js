@@ -21,6 +21,7 @@ export class FormInputDoble extends Component {
         e.preventDefault();
         const op = this.props.onSubmit(this.state.base, this.state.argumento);
         console.log(op);
+        this.props.guardarLS(op);
     }
 
     render() {

@@ -18,7 +18,9 @@ export class FormAlgebra extends Component {
 
     onSubmit(e){
         e.preventDefault();
-        this.props.onSubmit(this.state.base, this.state.argumento);
+        const op = this.props.onSubmit(this.state.argumento);
+        console.log(op);
+        // set local storage
     }
 
     render() {
@@ -30,7 +32,7 @@ export class FormAlgebra extends Component {
                             <div className="form-group">
                                 <div className="col-md-5">
                                     <label className="control-label">{this.props.mensaje}</label>
-                                    <input name="base" type="number" min="2" className="form-control" onChange={this.onChange.bind(this)} />
+                                    <input name="argumento" type="number" min="2" className="form-control" onChange={this.onChange.bind(this)} />
                                 </div>
                             </div>
                         </div>

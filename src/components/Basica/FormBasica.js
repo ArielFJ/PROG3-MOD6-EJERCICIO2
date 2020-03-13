@@ -24,6 +24,25 @@ export class FormBasica extends Component {
         // Subir operaciones al localSotrage
     }
 
+    obtenerElementosLS(){
+        let arreglo;
+        if(localStorage.length < 0){
+            arreglo = [];
+        }else{
+            arreglo = JSON.parse(localStorage.getItem('operaciones'));
+        }
+        return arreglo;
+    }
+
+    guardarEnLS(dato){
+        let arreglo = this.obtenerElementosLS();
+        if(arreglo === null)
+            arreglo = [];
+        
+        arreglo.push(dato);
+        localStorage.setItem('operaciones', JSON.stringify(arreglo));
+    }
+
     render() {
         return (
             <div>

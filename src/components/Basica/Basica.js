@@ -59,7 +59,7 @@ export class Resta extends Operacion {
     render() {
         return (
             <div>
-                <h1 className="display-4" >Suma</h1>
+                <h1 className="display-4" >Resta</h1>
                 <FormBasica 
                     signo="-"
                     onSubmit={this.onSubmit.bind(this)}
@@ -81,7 +81,7 @@ export class Multiplicacion extends Operacion {
     render() {
         return (
             <div>
-                <h1 className="display-4" >Suma</h1>
+                <h1 className="display-4" >Multiplicación</h1>
                 <FormBasica 
                     signo="*"
                     onSubmit={this.onSubmit.bind(this)}
@@ -103,7 +103,7 @@ export class Division extends Operacion {
     render() {
         return (
             <div>
-                <h1 className="display-4" >Suma</h1>
+                <h1 className="display-4" >División</h1>
                 <FormBasica 
                     signo="/"
                     onSubmit={this.onSubmit.bind(this)}

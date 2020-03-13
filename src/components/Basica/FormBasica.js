@@ -19,7 +19,8 @@ export class FormBasica extends Component {
 
     onSubmit(e){
         e.preventDefault();
-        this.props.onSubmit(this.state.n1, this.state.n2);
+        const op = this.props.onSubmit(this.state.n1, this.state.n2);
+        console.log(op);
     }
 
     render() {

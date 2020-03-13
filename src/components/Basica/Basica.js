@@ -31,6 +31,7 @@ export class Suma extends Operacion {
         this.setState({
             res: n1 + n2
         });
+        return `${n1} + ${n2} = ${n1+n2}`;
     }
 
     render() {
@@ -52,6 +53,7 @@ export class Resta extends Operacion {
         this.setState({
             res: n1 - n2
         });
+        return `${n1} - ${n2} = ${n1-n2}`;
     }
 
     render() {
@@ -73,6 +75,7 @@ export class Multiplicacion extends Operacion {
         this.setState({
             res: n1 * n2
         });
+        return `${n1} * ${n2} = ${n1*n2}`;
     }
 
     render() {
@@ -94,6 +97,7 @@ export class Division extends Operacion {
         this.setState({
             res: n1 / n2
         });
+        return `${n1} / ${n2} = ${n1/n2}`;
     }
 
     render() {

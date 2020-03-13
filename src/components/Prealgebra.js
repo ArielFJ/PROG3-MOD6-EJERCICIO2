@@ -22,6 +22,7 @@ export class Potencia extends Operacion {
         this.setState({
             res
         });
+        return `${base}^${exponente} = ${res}`;
     }
 
     render() {
@@ -29,6 +30,7 @@ export class Potencia extends Operacion {
             <div>
                 <h1 className="display-4" >Potencia</h1>
                 <FormInputDoble
+                    guardarLS={this.props.guardarLS}
                     input1="Base"
                     input2="Exponente"
                     onSubmit={this.onSubmit.bind(this)}
@@ -44,6 +46,7 @@ export class RaizCuadrada extends Operacion {
         this.setState({
             res
         });
+        return `Raíz cuadrada de ${radicando} = ${res}`;
     }
 
     render() {
@@ -51,6 +54,7 @@ export class RaizCuadrada extends Operacion {
             <div>
                 <h1 className="display-4" >Raíz Cuadrada</h1>
                 <FormAlgebra
+                    guardarLS={this.props.guardarLS}
                     mensaje="Radicando"
                     onSubmit={this.onSubmit.bind(this)}
                     res={this.state.res} />
@@ -65,6 +69,7 @@ export class RaizCubica extends Operacion {
         this.setState({
             res
         });
+        return `Raíz cúbica de ${radicando} = ${res}`;
     }
 
     render() {
@@ -72,6 +77,7 @@ export class RaizCubica extends Operacion {
             <div>
                 <h1 className="display-4" >Raíz Cúbica</h1>
                 <FormAlgebra
+                    guardarLS={this.props.guardarLS}
                     mensaje="Radicando"
                     onSubmit={this.onSubmit.bind(this)}
                     res={this.state.res} />
@@ -86,6 +92,7 @@ export class Factorial extends Operacion {
         this.setState({
             res
         });
+        return `${factor}! = ${res}`;
     }
 
     factorial(factor){
@@ -98,6 +105,7 @@ export class Factorial extends Operacion {
             <div>
                 <h1 className="display-4" >Factorial</h1>
                 <FormAlgebra
+                    guardarLS={this.props.guardarLS}
                     mensaje="Factor"
                     onSubmit={this.onSubmit.bind(this)}
                     res={this.state.res} />

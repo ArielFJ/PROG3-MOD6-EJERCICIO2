@@ -14,6 +14,7 @@ export class Logaritmo extends Component {
         this.setState({
             res: res
         });
+        return `Log de ${argumento} en base ${base} = ${res}`;
     }
 
     render() {
@@ -21,6 +22,7 @@ export class Logaritmo extends Component {
             <div>
                 <h1 className="display-4" >Logaritmo</h1>
                 <FormInputDoble
+                    guardarLS={this.props.guardarLS}
                     input1="Base"
                     input2="Argumento"
                     onSubmit={this.onSubmit.bind(this)}
@@ -40,6 +42,7 @@ export class Neperiano extends Component {
         this.setState({
             res: res
         });
+        return `Ln(${argumento}) = ${res}`;
     }
 
     render() {
@@ -47,6 +50,7 @@ export class Neperiano extends Component {
             <div>
                 <h1 className="display-4" >Logaritmo Neperiano </h1>
                 <FormAlgebra
+                    guardarLS={this.props.guardarLS}
                     mensaje="Argumento"
                     onSubmit={this.onSubmit.bind(this)}
                     res={this.state.res} />
@@ -65,6 +69,7 @@ export class Exponencial extends Component {
         this.setState({
             res
         });
+        return `E^${argumento} = ${res}`;
     }
 
     render() {
@@ -72,6 +77,7 @@ export class Exponencial extends Component {
             <div>
                 <h1 className="display-4" >Exponencial</h1>
                 <FormAlgebra
+                    guardarLS={this.props.guardarLS}
                     mensaje="E (constante de Euler) elevado a:"
                     onSubmit={this.onSubmit.bind(this)}
                     res={this.state.res} />

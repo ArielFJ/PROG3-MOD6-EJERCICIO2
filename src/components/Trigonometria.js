@@ -22,10 +22,11 @@ class Operacion extends Component{
 
 export class Seno extends Operacion {
     onSubmit(valor){
-        let res = Math.sin(this.RetornaGrados(valor));
+        let res = Math.sin(this.RetornaGrados(valor)).toFixed(2);
         this.setState({
-            res: res.toFixed(2)
+            res: res
         });
+        return `Seno(${valor}) = ${res}`;
     }
 
     render() {
@@ -33,6 +34,7 @@ export class Seno extends Operacion {
             <div>
                 <h1 className="display-4" >Seno</h1>
                 <FormAlgebra
+                    guardarLS={this.props.guardarLS}
                     mensaje="Seno de"
                     onSubmit={this.onSubmit.bind(this)}
                     res={this.state.res} />
@@ -43,10 +45,11 @@ export class Seno extends Operacion {
 
 export class Coseno extends Operacion {
     onSubmit(valor){
-        let res = Math.cos(this.RetornaGrados(valor));
+        let res = Math.cos(this.RetornaGrados(valor)).toFixed(2);
         this.setState({
-            res: res.toFixed(2)
+            res: res
         });
+        return `Coseno(${valor}) = ${res}`;
     }
 
     render() {
@@ -54,6 +57,7 @@ export class Coseno extends Operacion {
             <div>
                 <h1 className="display-4" >Coseno</h1>
                 <FormAlgebra
+                    guardarLS={this.props.guardarLS}
                     mensaje="Coseno de"
                     onSubmit={this.onSubmit.bind(this)}
                     res={this.state.res} />
@@ -64,10 +68,11 @@ export class Coseno extends Operacion {
 
 export class Tangente extends Operacion {
     onSubmit(valor){
-        let res = Math.tan(this.RetornaGrados(valor));
+        let res = Math.tan(this.RetornaGrados(valor)).toFixed(2);
         this.setState({
-            res: res.toFixed(2)
+            res: res
         });
+        return `Tangente(${valor}) = ${res}`;
     }
 
     render() {
@@ -75,6 +80,7 @@ export class Tangente extends Operacion {
             <div>
                 <h1 className="display-4" >Tangente</h1>
                 <FormAlgebra
+                    guardarLS={this.props.guardarLS}
                     mensaje="Tangente de"
                     onSubmit={this.onSubmit.bind(this)}
                     res={this.state.res} />
@@ -85,10 +91,11 @@ export class Tangente extends Operacion {
 
 export class Cotangente extends Operacion {
     onSubmit(valor){
-        let res = 1 / Math.tan(this.RetornaGrados(valor));
+        let res = (1 / Math.tan(this.RetornaGrados(valor))).toFixed(2);
         this.setState({
-            res: res.toFixed(2)
+            res: res
         });
+        return `Cotangente(${valor}) = ${res}`;
     }
 
     render() {
@@ -96,6 +103,7 @@ export class Cotangente extends Operacion {
             <div>
                 <h1 className="display-4" >Cotangente</h1>
                 <FormAlgebra
+                    guardarLS={this.props.guardarLS}
                     mensaje="Cotangente de"
                     onSubmit={this.onSubmit.bind(this)}
                     res={this.state.res} />
@@ -106,10 +114,11 @@ export class Cotangente extends Operacion {
 
 export class Secante extends Operacion {
     onSubmit(valor){
-        let res = 1 / Math.cos(this.RetornaGrados(valor));
+        let res = (1 / Math.cos(this.RetornaGrados(valor))).toFixed(2);
         this.setState({
-            res: res.toFixed(2)
+            res: res
         });
+        return `Secante(${valor}) = ${res}`;
     }
 
     render() {
@@ -117,6 +126,7 @@ export class Secante extends Operacion {
             <div>
                 <h1 className="display-4" >Secante</h1>
                 <FormAlgebra
+                    guardarLS={this.props.guardarLS}
                     mensaje="Secante de"
                     onSubmit={this.onSubmit.bind(this)}
                     res={this.state.res} />
@@ -127,10 +137,11 @@ export class Secante extends Operacion {
 
 export class Cosecante extends Operacion {
     onSubmit(valor){
-        let res = 1 / Math.sin(this.RetornaGrados(valor));
+        let res = (1 / Math.sin(this.RetornaGrados(valor))).toFixed(2);
         this.setState({
-            res: res.toFixed(2)
+            res: res
         });
+        return `Cosecante(${valor}) = ${res}`;
     }
 
     render() {
@@ -138,6 +149,7 @@ export class Cosecante extends Operacion {
             <div>
                 <h1 className="display-4" >Cosecante</h1>
                 <FormAlgebra
+                    guardarLS={this.props.guardarLS}
                     mensaje="Cosecante de"
                     onSubmit={this.onSubmit.bind(this)}
                     res={this.state.res} />

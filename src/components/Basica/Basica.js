@@ -31,6 +31,7 @@ export class Suma extends Operacion {
         this.setState({
             res: n1 + n2
         });
+        return `${n1} + ${n2} = ${n1+n2}`;
     }
 
     render() {
@@ -38,6 +39,7 @@ export class Suma extends Operacion {
             <div>
                 <h1 className="display-4" >Suma</h1>
                 <FormBasica 
+                    guardarLS={this.props.guardarLS}
                     signo="+"
                     onSubmit={this.onSubmit.bind(this)}
                     res={this.state.res} />
@@ -52,13 +54,15 @@ export class Resta extends Operacion {
         this.setState({
             res: n1 - n2
         });
+        return `${n1} - ${n2} = ${n1-n2}`;
     }
 
     render() {
         return (
             <div>
-                <h1 className="display-4" >Suma</h1>
+                <h1 className="display-4" >Resta</h1>
                 <FormBasica 
+                    guardarLS={this.props.guardarLS}
                     signo="-"
                     onSubmit={this.onSubmit.bind(this)}
                     res={this.state.res} />
@@ -73,13 +77,15 @@ export class Multiplicacion extends Operacion {
         this.setState({
             res: n1 * n2
         });
+        return `${n1} * ${n2} = ${n1*n2}`;
     }
 
     render() {
         return (
             <div>
-                <h1 className="display-4" >Suma</h1>
+                <h1 className="display-4" >Multiplicación</h1>
                 <FormBasica 
+                    guardarLS={this.props.guardarLS}
                     signo="*"
                     onSubmit={this.onSubmit.bind(this)}
                     res={this.state.res} />
@@ -92,15 +98,17 @@ export class Division extends Operacion {
     onSubmit(n1, n2) {
         super.onSubmit(n1,n2);
         this.setState({
-            res: n1 / n2
+            res: (n1 / n2).toFixed(2)
         });
+        return `${n1} / ${n2} = ${(n1 / n2).toFixed(2)}`;
     }
 
     render() {
         return (
             <div>
-                <h1 className="display-4" >Suma</h1>
+                <h1 className="display-4" >División</h1>
                 <FormBasica 
+                    guardarLS={this.props.guardarLS}
                     signo="/"
                     onSubmit={this.onSubmit.bind(this)}
                     res={this.state.res} />
